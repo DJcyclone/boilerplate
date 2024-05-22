@@ -1,0 +1,9 @@
+{
+  "name": "scl",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@reduxjs/toolkit": "*",
+    "axios": "*",
+    "react": "*"
+  }
+}

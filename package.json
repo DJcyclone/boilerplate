@@ -1,0 +1,53 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "clean_nodes": "rimraf --glob ./**/node_modules",
+    "lint:time": "TIMING=1 eslint ./",
+    "lint": "eslint --debug .",
+    "lint:css": "stylelint .",
+    "lint-fix": "eslint . --fix",
+    "format": "prettier —write .",
+    "deduplicate-check": "yarn dedupe --check",
+    "deduplicate-fix": "yarn dedupe"
+  },
+  "devDependencies": {
+    "@emotion/eslint-plugin": "^11.11.0",
+    "@types/lodash": "^4.17.1",
+    "@types/node": "^18.19.32",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.2.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-monorepo-dependencies": "^1.0.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-app": "^6.2.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "postcss-styled-syntax": "^0.6.4",
+    "prettier": "^3.2.5",
+    "react-native-monorepo-tools": "^1.2.1",
+    "rimraf": "^5.0.5",
+    "stylelint": "^16.5.0",
+    "stylelint-config-standard": "^36.0.0",
+    "typescript": "^5.4.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

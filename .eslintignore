@@ -1,0 +1,7 @@
+**/.next/**
+.vscode
+**/build/**
+**/dist/**
+**/node_modules/**
+/node_modules
+**/*.js

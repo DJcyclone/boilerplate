@@ -1,0 +1,30 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "composite": true,
+    "incremental": true,
+    "downlevelIteration": true,
+    "jsxImportSource": "@emotion/react",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "paths": {
+      "web/src/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "**/*.ts",
+    "**/*.tsx",
+    "craco.config.ts",
+    "types"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
